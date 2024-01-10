@@ -22,9 +22,10 @@ LINK GITHUB https://github.com/ZAZW27/UKK-Calculator
     }
 </style>
 <body>
-    <div class="min-h-[100vh] py-4 w-[100vw] flex justify-center flex-wrap items-center gap-12" 
+    <div class="w-[100vw] absolute top-0 left-0 flex justify-center pt-4"><h1 class="text-3xl font-bold drop-shadow-xl">Calculator</h1></div>
+    <div class="min-h-[100vh] py-4 w-[100vw] flex justify-center flex-wrap items-center gap-12"
         style="
-        background: radial-gradient(circle, rgba(233,249,255,1) 0%, rgba(211,217,244,1) 50%, rgba(217,248,255,1) 100%);
+            background: radial-gradient(circle, rgba(233,249,255,1) 0%, rgba(211,217,244,1) 50%, rgba(217,248,255,1) 100%);
         "
         >
     
@@ -60,66 +61,66 @@ LINK GITHUB https://github.com/ZAZW27/UKK-Calculator
                 <input class="absolute text-sm text-slate-400 px-2" style="pointer-events: none;" type="button" name="predict" id="predict" value="Incoming value">
             </div>
             <div id="buttons" class="w-full h-full grid grid-cols-4 grid-rows-5 gap-2 px-4 py-4">
-                <div class="bg-red-400 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-red-400/30 hover:shadow-none hover:translate-y-1.5 trasnsition-all duration-150 ease-out">
-                    <input style="cursor: pointer;" class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="AC" onclick="display.value = ''; predict.value = eval(display.value)">
-                </div>
-                <div class="bg-blue-400 font-bold text-xl w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-blue-400/30 hover:shadow-none hover:translate-y-1.5 trasnsition-all duration-150 ease-out">
-                    <input style="cursor: pointer;" class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="/" onclick="display.value += '/'; predict.value = eval(display.value)">
-                </div>
-                <div class="bg-blue-400 font-bold text-xl w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-blue-400/30 hover:shadow-none hover:translate-y-1.5 trasnsition-all duration-150 ease-out">
-                    <input style="cursor: pointer;" class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="*" onclick="display.value += '*'; predict.value = eval(display.value)">
-                </div>
-                <div class="bg-red-400 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-red-400/30 hover:shadow-none hover:translate-y-1.5 trasnsition-all duration-150 ease-out">
-                    <input style="cursor: pointer;" class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="DEL" onclick="display.value = display.value.toString().slice(0, -1); predict.value = eval(display.value)">
+                <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30 hover:shadow-none hover:translate-y-1.5 trasnsition-all duration-150 ease-out">
+                    <input class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="AC" onclick="display.value = ''; predict.value = eval(display.value)">
                 </div>
                 <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30 hover:shadow-none hover:translate-y-1.5 trasnsition-all duration-150 ease-out">
-                    <input style="cursor: pointer;" class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="7" onclick="display.value += '7'; predict.value = eval(display.value)">
+                    <input class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="/" onclick="display.value += '/'; predict.value = eval(display.value)">
                 </div>
                 <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30 hover:shadow-none hover:translate-y-1.5 trasnsition-all duration-150 ease-out">
-                    <input style="cursor: pointer;" class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="8" onclick="display.value += '8'; predict.value = eval(display.value)">
+                    <input class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="*" onclick="display.value += '*'; predict.value = eval(display.value)">
                 </div>
                 <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30 hover:shadow-none hover:translate-y-1.5 trasnsition-all duration-150 ease-out">
-                    <input style="cursor: pointer;" class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="9" onclick="display.value += '9'; predict.value = eval(display.value)">
-                </div>
-                <div class="bg-blue-400 font-bold text-xl w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-blue-400/30 hover:shadow-none hover:translate-y-1.5 trasnsition-all duration-150 ease-out">
-                    <input style="cursor: pointer;" class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="-" onclick="display.value += '-'; predict.value = eval(display.value)">
+                    <input class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="DEL" onclick="display.value = display.value.toString().slice(0, -1); predict.value = eval(display.value)">
                 </div>
                 <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30 hover:shadow-none hover:translate-y-1.5 trasnsition-all duration-150 ease-out">
-                    <input style="cursor: pointer;" class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="4" onclick="display.value += '4'; predict.value = eval(display.value)">
+                    <input class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="7" onclick="display.value += '7'; predict.value = eval(display.value)">
                 </div>
                 <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30 hover:shadow-none hover:translate-y-1.5 trasnsition-all duration-150 ease-out">
-                    <input style="cursor: pointer;" class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="5" onclick="display.value += '5'; predict.value = eval(display.value)">
+                    <input class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="8" onclick="display.value += '8'; predict.value = eval(display.value)">
                 </div>
                 <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30 hover:shadow-none hover:translate-y-1.5 trasnsition-all duration-150 ease-out">
-                    <input style="cursor: pointer;" class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="6" onclick="display.value += '6'; predict.value = eval(display.value)">
+                    <input class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="9" onclick="display.value += '9'; predict.value = eval(display.value)">
                 </div>
-                <div class="bg-blue-400 font-bold text-xl w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-blue-400/30 hover:shadow-none hover:translate-y-1.5 trasnsition-all duration-150 ease-out">
-                    <input style="cursor: pointer;" class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="+" onclick="display.value += '+'; predict.value = eval(display.value)">
+                <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30 hover:shadow-none hover:translate-y-1.5 trasnsition-all duration-150 ease-out">
+                    <input class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="-" onclick="display.value += '-'; predict.value = eval(display.value)">
+                </div>
+                <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30 hover:shadow-none hover:translate-y-1.5 trasnsition-all duration-150 ease-out">
+                    <input class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="4" onclick="display.value += '4'; predict.value = eval(display.value)">
+                </div>
+                <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30 hover:shadow-none hover:translate-y-1.5 trasnsition-all duration-150 ease-out">
+                    <input class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="5" onclick="display.value += '5'; predict.value = eval(display.value)">
+                </div>
+                <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30 hover:shadow-none hover:translate-y-1.5 trasnsition-all duration-150 ease-out">
+                    <input class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="6" onclick="display.value += '6'; predict.value = eval(display.value)">
+                </div>
+                <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30 hover:shadow-none hover:translate-y-1.5 trasnsition-all duration-150 ease-out">
+                    <input class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="+" onclick="display.value += '+'; predict.value = eval(display.value)">
                 </div>
                 <div class="col-span-3 row-span-2 grid grid-cols-3 grid-rows-2 gap-4">
                     <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30 hover:shadow-none hover:translate-y-1.5 trasnsition-all duration-150 ease-out">
-                        <input style="cursor: pointer;" class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="1" onclick="display.value += '1'; predict.value = eval(display.value)">
+                        <input class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="1" onclick="display.value += '1'; predict.value = eval(display.value)">
                     </div>
                     <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30 hover:shadow-none hover:translate-y-1.5 trasnsition-all duration-150 ease-out">
-                        <input style="cursor: pointer;" class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="2" onclick="display.value += '2'; predict.value = eval(display.value)">
+                        <input class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="2" onclick="display.value += '2'; predict.value = eval(display.value)">
                     </div>
                     <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30 hover:shadow-none hover:translate-y-1.5 trasnsition-all duration-150 ease-out">
-                        <input style="cursor: pointer;" class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="3" onclick="display.value += '3'; predict.value = eval(display.value)">
+                        <input class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="3" onclick="display.value += '3'; predict.value = eval(display.value)">
                     </div>
                     
-                    <div class="bg-blue-400 font-bold text-xl w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-blue-400/30 hover:shadow-none hover:translate-y-1.5 trasnsition-all duration-150 ease-out">
-                        <input style="cursor: pointer;" class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="%" onclick="display.value += '%'; predict.value = eval(display.value)">
+                    <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30 hover:shadow-none hover:translate-y-1.5 trasnsition-all duration-150 ease-out">
+                        <input class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="%" onclick="display.value += '%'; predict.value = eval(display.value)">
                     </div>
-                    <div class="bg-slate-200 w-12 h-12 font-bold  flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30 hover:shadow-none hover:translate-y-1.5 trasnsition-all duration-150 ease-out">
-                        <input style="cursor: pointer;" class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="0" onclick="display.value += '0'; predict.value = eval(display.value)">
+                    <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30 hover:shadow-none hover:translate-y-1.5 trasnsition-all duration-150 ease-out">
+                        <input class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="0" onclick="display.value += '0'; predict.value = eval(display.value)">
                     </div>
-                    <div class="bg-amber-400 w-12 font-bold text-xl h-12 flex justify-center items-center rounded-md shadow-lg shadow-amber-400/30 hover:shadow-none hover:translate-y-1.5 trasnsition-all duration-150 ease-out">
-                        <input style="cursor: pointer;" class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="." onclick="display.value += '.'; predict.value = eval(display.value)">
+                    <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30 hover:shadow-none hover:translate-y-1.5 trasnsition-all duration-150 ease-out">
+                        <input class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg" type="button" value="." onclick="display.value += '.'; predict.value = eval(display.value)">
                     </div>
                 </div>
                 <div class="col-span-1 row-span-2">
-                    <div class="bg-green-400 font-bold text-2xl w-12 h-full flex justify-center items-center rounded-md shadow-lg shadow-emerald-400/60 hover:shadow-none hover:translate-y-1.5 trasnsition-all duration-300 ease-out">
-                        <input style="cursor: pointer;" class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg " id="equal" type="button" value="=" >
+                    <div class="bg-green-400 font-bold text-2xl w-12 h-full flex justify-center items-center rounded-md shadow-lg shadow-emerald-400/60 hover:shadow-none hover:translate-y-1.5 trasnsition-all duration-500 ease-out">
+                        <input class="w-full h-full pointer font-bold shadow-inner shadow-slate-300/30 hover:shaodw-none rounded-lg " id="equal" type="button" value="=" >
                     </div>
                 </div>
             </div>
@@ -167,9 +168,9 @@ LINK GITHUB https://github.com/ZAZW27/UKK-Calculator
                 `;
             });
         });
+
+
+
     </script>
-    <div class="flex justify-around">
-        
-    </div>
 </body>
 </html>

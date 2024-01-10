@@ -7,15 +7,111 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <div class="h-[100vh] w-[100vw] bg-slate-200 flex justify-center items-center">
-        <div class="h-[30rem] bg-white w-[20rem] rounded-md shadow-md flex flex-col justify-center items-center px-4 py-6 gap-4">
-            <div id="console" class="w-full h-[5rem] shadow-inner bg-slate-100 rounded-lg"></div>
+    <div class="h-[100vh] w-[100vw] bg-slate-200 flex justify-center items-center gap-12">
+        <!-- <form> -->
+            <div class="flex flex-col justify-center gap-4 rounded-xl shadow-lg items-center bg-white py-12 px-4">
+                <input class="rounded-md bg-slate-100 h-12 px-2" type="text" id="firstVal" placeholder="first value">
+                <input class="rounded-md bg-slate-100 h-12 px-2" type="text" id="secVal" placeholder="Second value">
+                <!-- <input class="rounded-md bg-slate-100 h-12 px-2" type="text" id="ops" placeholder="Operator"> -->
+                <select class="rounded-md bg-slate-100 w-full h-12 px-2" name="" id="ops">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">x</option>
+                    <option value="/">:</option>
+                    <option value="%">Mod</option>
+                </select>
+                <button class="bg-green-400 shadow-md rounded-md px-2 py-1 w-[6rem] font-bold" id="subBtn">Submit</button>
+                <h1 class="self-start">Hasil: <span id="hasil"></span></h1>
+                <script>
+                    var firstVal = document.getElementById('firstVal')
+                    var sectVal = document.getElementById('secVal')
+                    var ops = document.getElementById('ops')
+                    var hasil = document.getElementById('hasil')
+                    
+                    const submit = document.getElementById('subBtn')
+                    
+                    submit.addEventListener('click', function(){
+                        console.log(ops.value)
+                        hasil.innerText = eval(`${parseInt(firstVal.value)} ${ops.value} ${parseInt(secVal.value)}`);
+                    })
+                </script>
+            </div>
+        <!-- </form> -->
+        <form class="h-[30rem] bg-white w-[20rem] rounded-xl shadow-md flex flex-col justify-center items-center px-4 py-6 gap-4">
+            <div id="console" class="w-full h-[5rem] shadow-inner bg-slate-100 rounded-lg flex justify-end items-end">
+                <input class="w-full h-full bg-slate-100 text-right px-2" type="text" name="display" oninput="predict.value = eval(display.value)">
+                <input class="absolute text-sm text-slate-400" type="button" name="predict" id="predict" value="Incoming value">
+            </div>
             <div id="buttons" class="w-full h-full bg-slate-50 grid grid-cols-4 grid-rows-5 gap-2 px-4 py-4">
-                <div class="bg-slate-200 w-12 h-12 flex justify-center items-center">
-                    <button class="w-full h-full">1</button>
+                <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30">
+                    <input class="w-full h-full pointer font-bold" type="button" value="AC" onclick="display.value = ''; predict.value = eval(display.value)">
+                </div>
+                <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30">
+                    <input class="w-full h-full pointer font-bold" type="button" value="/" onclick="display.value += '/'; predict.value = eval(display.value)">
+                </div>
+                <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30">
+                    <input class="w-full h-full pointer font-bold" type="button" value="*" onclick="display.value += '*'; predict.value = eval(display.value)">
+                </div>
+                <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30">
+                    <input class="w-full h-full pointer font-bold" type="button" value="DEL" onclick="display.value = display.value.toString().slice(0, -1); predict.value = eval(display.value)">
+                </div>
+                <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30">
+                    <input class="w-full h-full pointer font-bold" type="button" value="7" onclick="display.value += '7'; predict.value = eval(display.value)">
+                </div>
+                <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30">
+                    <input class="w-full h-full pointer font-bold" type="button" value="8" onclick="display.value += '8'; predict.value = eval(display.value)">
+                </div>
+                <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30">
+                    <input class="w-full h-full pointer font-bold" type="button" value="9" onclick="display.value += '9'; predict.value = eval(display.value)">
+                </div>
+                <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30">
+                    <input class="w-full h-full pointer font-bold" type="button" value="-" onclick="display.value += '-'; predict.value = eval(display.value)">
+                </div>
+                <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30">
+                    <input class="w-full h-full pointer font-bold" type="button" value="4" onclick="display.value += '4'; predict.value = eval(display.value)">
+                </div>
+                <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30">
+                    <input class="w-full h-full pointer font-bold" type="button" value="5" onclick="display.value += '5'; predict.value = eval(display.value)">
+                </div>
+                <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30">
+                    <input class="w-full h-full pointer font-bold" type="button" value="6" onclick="display.value += '6'; predict.value = eval(display.value)">
+                </div>
+                <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30">
+                    <input class="w-full h-full pointer font-bold" type="button" value="+" onclick="display.value += '+'; predict.value = eval(display.value)">
+                </div>
+                <div class="col-span-3 row-span-2 grid grid-cols-3 grid-rows-2 gap-4">
+                    <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30">
+                        <input class="w-full h-full pointer font-bold" type="button" value="1" onclick="display.value += '1'; predict.value = eval(display.value)">
+                    </div>
+                    <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30">
+                        <input class="w-full h-full pointer font-bold" type="button" value="2" onclick="display.value += '2'; predict.value = eval(display.value)">
+                    </div>
+                    <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30">
+                        <input class="w-full h-full pointer font-bold" type="button" value="3" onclick="display.value += '3'; predict.value = eval(display.value)">
+                    </div>
+                    
+                    <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30">
+                        <input class="w-full h-full pointer font-bold" type="button" value="%" onclick="display.value += '%'; predict.value = eval(display.value)">
+                    </div>
+                    <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30">
+                        <input class="w-full h-full pointer font-bold" type="button" value="0" onclick="display.value += '0'; predict.value = eval(display.value)">
+                    </div>
+                    <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30">
+                        <input class="w-full h-full pointer font-bold" type="button" value="." onclick="display.value += '.'; predict.value = eval(display.value)">
+                    </div>
+                </div>
+                <div class="col-span-1 row-span-2">
+                    <div class="bg-slate-200 w-12 h-full flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30">
+                        <input class="w-full h-full pointer font-bold" type="button" value="=" onclick="display.value = eval(display.value)">
+                    </div>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
+    <script>
+        display.addEventListener('input', function(){
+            predict.value = eval(display.value)
+        })
+    </script>
 </body>
 </html>

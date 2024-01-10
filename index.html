@@ -22,7 +22,12 @@ LINK GITHUB https://github.com/ZAZW27/UKK-Calculator
     }
 </style>
 <body>
-    <div class="h-[100vh] w-[100vw] flex justify-center items-center gap-12" style="background: linear-gradient(45deg, rgb(222, 240, 250), rgb(240, 233, 252));">
+    <div class="min-h-[100vh] py-4 w-[100vw] flex justify-center flex-wrap items-center gap-12" 
+        style="
+        /* background: linear-gradient(45deg, rgb(222, 240, 250), rgb(240, 233, 252)); */
+        background: radial-gradient(circle, rgba(233,249,255,1) 0%, rgba(211,217,244,1) 50%, rgba(217,248,255,1) 100%);
+        "
+        >
     
         <div class="flex flex-col justify-center gap-4 rounded-xl shadow-lg items-center bg-white backdrop-blur-xl py-12 px-4">
             <input class="rounded-md shadow-md shadow-slate-500/10 bg-slate-50 h-12 px-2" type="text" id="firstVal" placeholder="first value">
@@ -52,8 +57,8 @@ LINK GITHUB https://github.com/ZAZW27/UKK-Calculator
         </div>
         <form class="h-[30rem] bg-white backdrop-blur-xl w-[20rem] rounded-2xl shadow-md flex flex-col justify-center items-center px-4 py-6 gap-4">
             <div id="console" class="w-full h-[5rem] shadow-inner bg-slate-100 rounded-lg flex justify-end items-end">
-                <input class="w-full h-full bg-slate-100 text-right px-2 rounded-lg" id="displayId" type="text" name="display" oninput="predict.value = eval(display.value)">
-                <input class="absolute text-sm text-slate-400 px-2" type="button" name="predict" id="predict" value="Incoming value">
+                <input class="w-full h-full bg-slate-100 text-right px-2 rounded-lg shadow-inner" id="displayId" type="text" name="display" oninput="predict.value = eval(display.value)">
+                <input class="absolute text-sm text-slate-400 px-2" style="pointer-events: none;" type="button" name="predict" id="predict" value="Incoming value">
             </div>
             <div id="buttons" class="w-full h-full grid grid-cols-4 grid-rows-5 gap-2 px-4 py-4">
                 <div class="bg-slate-200 w-12 h-12 flex justify-center items-center rounded-md shadow-lg shadow-slate-400/30">
@@ -121,10 +126,8 @@ LINK GITHUB https://github.com/ZAZW27/UKK-Calculator
             </div>
         </form>
         <div class="h-[90vh] w-[20rem] flex flex-col text-xl bg-white backdrop-blur-xl py-4 px-2 rounded-2xl shadow-lg" >
-            <h1 class="font-bold">History:</h1>
-            <div class="w-full px-2 h-full flex flex-col overflow-y-auto text-slate-400 text-xl gap-4  " id="history-content">
-        
-            </div>
+            <h1 class="font-bold pl-3">History:</h1>
+            <div class="w-full px-6 h-full flex flex-col overflow-y-auto text-slate-400 text-xl gap-4  " id="history-content"></div>
         </div>
     </div>
     <script>
@@ -163,8 +166,6 @@ LINK GITHUB https://github.com/ZAZW27/UKK-Calculator
                         <hr class="border-b-2 border-slate-300/60">
                     </div>
                 `;
-                // eval(1 + 1)
-                // display.value = eval(display.value);
             });
         });
 
